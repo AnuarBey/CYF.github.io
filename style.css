@@ -1,0 +1,168 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url("CYF.png") no-repeat center center;
+    background-size: contain;
+}
+
+.invite-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.invite-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    animation: fadeInDown 1s ease-out;
+}
+
+header .tagline {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 5px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+main p {
+    margin: 10px 0;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.details {
+    margin-top: 15px;
+    color: #555;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.rsvp-btn {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.rsvp-btn:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: translateY(-3px);
+}
+
+.guest-list {
+    margin-top: 20px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-out forwards;
+}
+
+.guest-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guest-list li {
+    background: #f7f9fc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guest-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .invite-card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .tagline {
+        font-size: 0.9rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    .rsvp-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .guest-list ul {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .invite-card {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    main p {
+        font-size: 0.85rem;
+    }
+
+    .rsvp-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
